@@ -1,4 +1,4 @@
-package org.example.admin;
+package org.example.blog;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -10,9 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Description: everything is ok
  */
 @SpringBootApplication
-@MapperScan("org.example.admin.mapper")
-public class AdminApplication {
+@MapperScan("org.example.blog.mapper")
+public class BlogApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AdminApplication.class,args);
+        SpringApplication.run(BlogApplication.class,args);
     }
 }
