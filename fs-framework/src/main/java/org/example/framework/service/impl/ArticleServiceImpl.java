@@ -11,6 +11,7 @@ import org.example.framework.mapper.ArticleMapper;
 import org.example.framework.service.ArticleService;
 import org.example.framework.service.CategoryService;
 import org.example.framework.utils.BeanCopyUtils;
+import org.example.framework.vo.ArticleDetailVo;
 import org.example.framework.vo.ArticleListVo;
 import org.example.framework.vo.HotArticleVo;
 import org.example.framework.vo.PageVo;
@@ -89,12 +90,14 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
         //转换成VO
         ArticleDetailVo articleDetailVo = BeanCopyUtils.copyBean(article, ArticleDetailVo.class);
+
         //根据分类id查询分类名
         Long categoryId = articleDetailVo.getCategoryId();
         Category category = categoryService.getById(categoryId);
         if(category!=null){
             articleDetailVo.setCategoryName(category.getName());
         }
+
         //封装响应返回
         return ResponseResult.okResult(articleDetailVo);
     }

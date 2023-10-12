@@ -1,24 +1,24 @@
 package org.example.blog.controller;
 
 import org.example.framework.domain.ResponseResult;
-import org.example.framework.service.CategoryService;
+import org.example.framework.service.LinkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 分类
+ * 友链
  */
 @RestController
-@RequestMapping("/category")
-public class CategoryController {
+@RequestMapping("/link")
+public class LinkController {
 
     @Autowired
-    private CategoryService categoryService;
+    private LinkService linkService;
 
-    @GetMapping("/getCategoryList")
-    public ResponseResult getCategoryList(){
-       return categoryService.getCategoryList();
+    @GetMapping("/getAllLink")
+    public ResponseResult getAllLink(){
+        return linkService.getAllLink();
     }
 }

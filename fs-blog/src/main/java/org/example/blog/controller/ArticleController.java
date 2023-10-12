@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/**
+ * 文章
+ */
 @RestController
 @RequestMapping("/article")
 public class ArticleController {
