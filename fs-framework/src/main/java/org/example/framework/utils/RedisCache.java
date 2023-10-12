@@ -1,4 +1,4 @@
-package org.example.framework.config;
+package org.example.framework.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.BoundSetOperations;

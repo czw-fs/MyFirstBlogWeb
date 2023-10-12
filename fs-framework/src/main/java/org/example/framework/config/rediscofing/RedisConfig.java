@@ -1,4 +1,4 @@
-package org.example.framework.config;
+package org.example.framework.config.rediscofing;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
