@@ -20,3 +20,9 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
       id-type: auto
+# 七牛云
+oss:
+  accessKey: YrNRJryIwW1mMIFGoafbJxbPrIVy7qgNndQievhZ
+  secretKey: FeueHhpU328oPSI6wvWkn7Os0OY42wglbXMs8J3Q
+  bucket: fsublog
+  domainName: http://s2gcdnhjm.hb-bkt.clouddn.com/
