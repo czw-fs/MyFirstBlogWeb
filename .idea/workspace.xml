@@ -1,14 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2272f2c9-790d-417f-a738-7fa5f0da25da" name="Changes" comment="" />
+    <list default="true" id="2de853cb-1b2f-451a-b8cc-02ae3fc3542a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-admin/target/classes/org/example/admin/AdminApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-blog/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-blog/target/classes/org/example/blog/BlogApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-blog/target/classes/org/example/blog/controller/ArticleController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-blog/target/classes/org/example/blog/controller/BlogLoginController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-blog/target/classes/org/example/blog/controller/CategoryController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-blog/target/classes/org/example/blog/controller/CommentController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-blog/target/classes/org/example/blog/controller/LinkController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-blog/target/classes/org/example/blog/filter/JwtAuthenticationTokenFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-blog/target/classes/org/example/blog/security/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/config/mybatisconfig/MyMetaObjectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/utils/SecurityUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/config/MbatisPlusConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/config/WebConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/config/mybatisconfig/MyMetaObjectHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/config/rediscofing/FastJsonRedisSerializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/config/rediscofing/RedisConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/constants/SystemConstants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/domain/AppHttpCodeEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/domain/LoginUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/domain/ResponseResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/domain/SystemException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/domain/entity/Article.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/domain/entity/Category.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/domain/entity/Comment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/domain/entity/Link.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/domain/entity/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/globalexception/GlobalExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/handle/security/AccessDeniedHandlerImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/handle/security/AuthenticationEntryPointImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/mapper/ArticleMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/mapper/CategoryMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/mapper/CommentMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/mapper/LinkMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/mapper/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/service/ArticleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/service/BlogLoginService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/service/CategoryService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/service/CommentService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/service/LinkService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/service/impl/ArticleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/service/impl/BlogLoginServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/service/impl/CategoryServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/service/impl/CommentServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/service/impl/LinkServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/service/impl/UserDetailsServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/utils/BeanCopyUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/utils/JwtUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/utils/RedisCache.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/utils/SecurityUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/utils/WebUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/vo/ArticleDetailVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/vo/ArticleListVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/vo/BlogUserLoginVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/vo/CategoryVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/vo/CommentVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/vo/HotArticleVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/vo/LinkVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/vo/PageVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/target/classes/org/example/framework/vo/UserInfoVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/fs-admin/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/security/SecurityConfig.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CompilerWorkspaceConfiguration">
-    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -16,48 +86,64 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../maven/maven3.6.3" />
-        <option name="showDialogWithAdvancedSettings" value="true" />
-        <option name="userSettingsFile" value="E:\maven\maven3.6.3\conf\settings.xml" />
+        <option name="localRepository" value="E:\devtool\respiratory" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2Wca6BcaEZMEe0E0QYsGrSduozM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2WgrMqUJ0SAPUlMiQsVAFbMRoEO" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
-    <option name="showVisibilityIcons" value="true" />
-    <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "preferences.general",
+    "last_opened_file_path": "E:/projecttest/gitrep/hello-Security",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.AdminApplication">
+    <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="fs-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.admin.AdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="fs-blog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.blog.BlogApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2272f2c9-790d-417f-a738-7fa5f0da25da" name="Changes" comment="" />
-      <created>1697034144592</created>
+      <changelist id="2de853cb-1b2f-451a-b8cc-02ae3fc3542a" name="Changes" comment="" />
+      <created>1697165022279</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1697034144592</updated>
+      <updated>1697165022279</updated>
+      <workItem from="1697165024262" duration="51000" />
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

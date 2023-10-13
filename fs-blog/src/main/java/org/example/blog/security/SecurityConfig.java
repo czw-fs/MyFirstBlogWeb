@@ -48,7 +48,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //注销接口需要认证才能访问
                 .antMatchers("/logout").authenticated()
                 //其余接口都要认证
-                .anyRequest().authenticated();
+
+                /**
+                 * 暂时这样些
+                 */
+                .anyRequest().permitAll();
 
         //配置异常处理器
         http.exceptionHandling()
