@@ -24,5 +24,7 @@ mybatis-plus:
 oss:
   accessKey: YrNRJryIwW1mMIFGoafbJxbPrIVy7qgNndQievhZ
   secretKey: FeueHhpU328oPSI6wvWkn7Os0OY42wglbXMs8J3Q
+  # 云空间名称
   bucket: fsublog
+  # 云空间域名
   domainName: http://s2gcdnhjm.hb-bkt.clouddn.com/
