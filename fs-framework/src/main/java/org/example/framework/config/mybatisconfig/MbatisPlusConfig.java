@@ -1,4 +1,4 @@
-package org.example.framework.config;
+package org.example.framework.config.mybatisconfig;
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;

@@ -1,9 +1,11 @@
 package org.example.framework.service.impl;
-
+import org.example.framework.constants.SystemConstants;
+import org.example.framework.domain.AppHttpCodeEnum;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.example.framework.domain.ResponseResult;
+import org.example.framework.domain.SystemException;
 import org.example.framework.domain.entity.Comment;
 import org.example.framework.domain.entity.User;
 import org.example.framework.mapper.CommentMapper;
@@ -14,6 +16,7 @@ import org.example.framework.vo.CommentVo;
 import org.example.framework.vo.PageVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 
@@ -23,14 +26,18 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
     @Autowired
     private UserService userService;
 
+
     @Override
-    public ResponseResult commentList(Long articleId, Integer pageNum, Integer pageSize) {
+    public ResponseResult commentList(String commentType, Long articleId, Integer pageNum, Integer pageSize) {
         //查询对应文章的根评论
         LambdaQueryWrapper<Comment> queryWrapper = new LambdaQueryWrapper<>();
         //对articleId进行判断
-        queryWrapper.eq(Comment::getArticleId,articleId);
+        queryWrapper.eq(SystemConstants.ARTICLE_COMMENT.equals(commentType),Comment::getArticleId,articleId);
         //根评论 rootId为-1
         queryWrapper.eq(Comment::getRootId,-1);
+
+        //评论类型
+        queryWrapper.eq(Comment::getType,commentType);
 
         //分页查询
         Page<Comment> page = new Page(pageNum,pageSize);
@@ -81,4 +88,19 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
         }
         return commentVos;
     }
+
+    @Override
+    public ResponseResult addComment(Comment comment) {
+        //评论内容不能为空
+        if(!StringUtils.hasText(comment.getContent())){
+            throw new SystemException(AppHttpCodeEnum.CONTENT_NOT_NULL);
+        }
+        save(comment);
+        return ResponseResult.okResult();
+    }
+
+
+
+
+
 }

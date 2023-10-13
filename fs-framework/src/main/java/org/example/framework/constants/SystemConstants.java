@@ -18,5 +18,14 @@ public class SystemConstants
      * 友链状态为审核通过
      */
     public static final String  LINK_STATUS_NORMAL = "0";
+
+    /**
+     * 评论类型为：文章评论
+     */
+    public static final String ARTICLE_COMMENT = "0";
+    /**
+     * 评论类型为：友联评论
+     */
+    public static final String LINK_COMMENT = "1";
     
 }
