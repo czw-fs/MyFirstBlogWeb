@@ -11,6 +11,7 @@ import org.example.framework.mapper.ArticleMapper;
 import org.example.framework.service.ArticleService;
 import org.example.framework.service.CategoryService;
 import org.example.framework.utils.BeanCopyUtils;
+import org.example.framework.utils.RedisCache;
 import org.example.framework.vo.ArticleDetailVo;
 import org.example.framework.vo.ArticleListVo;
 import org.example.framework.vo.HotArticleVo;
@@ -28,6 +29,16 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
     @Autowired
     private CategoryService categoryService;
+
+    @Autowired
+    private RedisCache redisCache;
+
+    @Override
+    public ResponseResult updateViewCount(Long id) {
+        //更新redis中对应 id的浏览量
+        redisCache.incrementCacheMapValue("article:viewCount",id.toString(),1);
+        return ResponseResult.okResult();
+    }
 
     @Override
     public ResponseResult hotArticleList() {
@@ -58,7 +69,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         //查询条件
         LambdaQueryWrapper<Article> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         // 如果 有categoryId 就要 查询时要和传入的相同
-        lambdaQueryWrapper.eq(Objects.nonNull(categoryId) && categoryId>0 ,Article::getCategoryId,categoryId);
+        lambdaQueryWrapper.eq(Objects.nonNull(categoryId) && categoryId > 0 ,Article::getCategoryId,categoryId);
         // 状态是正式发布的
         lambdaQueryWrapper.eq(Article::getStatus,SystemConstants.ARTICLE_STATUS_NORMAL);
         // 对isTop进行降序
@@ -88,13 +99,16 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         //根据id查询文章
         Article article = getById(id);
 
+        //从redis中获取viewCount
+        Integer viewCount = redisCache.getCacheMapValue("article:viewCount", id.toString());
+        article.setViewCount(viewCount.longValue());
+
         //转换成VO
         ArticleDetailVo articleDetailVo = BeanCopyUtils.copyBean(article, ArticleDetailVo.class);
 
         //根据分类id查询分类名
-        Long categoryId = articleDetailVo.getCategoryId();
-        Category category = categoryService.getById(categoryId);
-        if(category!=null){
+        Category category = categoryService.getById(articleDetailVo.getCategoryId());
+        if(category != null){
             articleDetailVo.setCategoryName(category.getName());
         }
 

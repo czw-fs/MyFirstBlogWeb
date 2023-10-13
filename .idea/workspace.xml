@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="142a474b-7f8f-47d1-be88-8ba01b297f71" name="Changes" comment="七牛云上传头像，更新个人资料 done">
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+    <list default="true" id="142a474b-7f8f-47d1-be88-8ba01b297f71" name="Changes" comment="注册 done">
+      <change afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/ViewCountRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/schedule/UpdateViewCountJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/annotation/SystemLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/aspect/LogAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/BlogApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/BlogApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-blog/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/AppHttpCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/AppHttpCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/config/mybatisconfig/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/config/mybatisconfig/MyMetaObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/entity/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/utils/RedisCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/utils/RedisCache.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +33,31 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "czw-fs"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8dd811f0-f547-4d6c-9f98-b498d8800919" />
+        <option name="url" value="https://github.com/czw-fs/MyFirstBlogWeb.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -109,6 +137,15 @@
       <updated>1697163980463</updated>
       <workItem from="1697163982817" duration="1018000" />
     </task>
+    <task id="LOCAL-00001" summary="注册 done">
+      <option name="closed" value="true" />
+      <created>1697180839407</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697180839407</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,7 +164,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="七牛云上传头像，更新个人资料 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="七牛云上传头像，更新个人资料 done" />
+    <MESSAGE value="注册 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="注册 done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -135,9 +173,24 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/filter/JwtAuthenticationTokenFilter.java</url>
           <line>35</line>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/impl/ArticleServiceImpl.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/config/mybatisconfig/MyMetaObjectHandler.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint" memberName="signature" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

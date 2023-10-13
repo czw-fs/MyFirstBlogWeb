@@ -46,6 +46,11 @@ public class Article {
     //是否允许评论 1是，0否
     private String isComment;
 
+    public Article(Long id, long viewCount) {
+        this.id = id;
+        this.viewCount = viewCount;
+    }
+
     /**
      * 创建人的用户id
      */

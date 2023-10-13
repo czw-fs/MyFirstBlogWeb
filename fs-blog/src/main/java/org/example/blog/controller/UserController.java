@@ -1,5 +1,6 @@
 package org.example.blog.controller;
 
+import org.example.framework.annotation.SystemLog;
 import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.entity.User;
 import org.example.framework.service.UserService;
@@ -19,6 +20,7 @@ public class UserController {
     }
 
     @PutMapping("/userInfo")
+    @SystemLog(BusinessName = "更新用户")
     public ResponseResult updateUserInfo(@RequestBody User user){
         return userService.updateUserInfo(user);
     }

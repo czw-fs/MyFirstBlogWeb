@@ -2,14 +2,12 @@ package org.example.blog.controller;
 
 
 
+import org.example.framework.annotation.SystemLog;
 import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.entity.Article;
 import org.example.framework.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,6 +20,11 @@ public class ArticleController {
 
     @Autowired
     private ArticleService articleService;
+
+    @PutMapping("/updateViewCount/{id}")
+    public ResponseResult updateViewCount(@PathVariable("id") Long id){
+        return articleService.updateViewCount(id);
+    }
 
     /**
      * 热门文章列表
@@ -42,8 +45,10 @@ public class ArticleController {
      * @return
      */
     @GetMapping("/articleList")
+    @SystemLog(BusinessName = "获取文章列表")
     public ResponseResult articleList(Integer pageNum,Integer pageSize,Long categoryId){
-        return articleService.articleList(pageNum,pageSize,categoryId);
+        ResponseResult responseResult = articleService.articleList(pageNum, pageSize, categoryId);
+        return responseResult;
     }
 
     @GetMapping("/{id}")
