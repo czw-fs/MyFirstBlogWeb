@@ -23,6 +23,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private AccessDeniedHandler accessDeniedHandler;
 
+    private  static  final  String[]  AUTH_WHITELIST  =  {
+            // -- swagger ui
+            "/swagger-resources/**",
+            "/swagger-ui.html",
+            "/v2/api-docs",
+            "/webjars/**"
+    };
+
     @Override
     @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
@@ -49,10 +57,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/logout").authenticated()
                 //个人信息接口必须登录后才能访问
                 .antMatchers("/user/userInfo").authenticated()
+                //配置允许访问http://localhost:7777/swagger-ui.html
+                .antMatchers(AUTH_WHITELIST).permitAll()
                 //其余接口都要认证
-
                 /**
-                 * 暂时这样些
+                 * 暂时这样写
                  */
                 .anyRequest().permitAll();
 
@@ -68,6 +77,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
         //允许跨域
         http.cors();
+
     }
 
     @Bean

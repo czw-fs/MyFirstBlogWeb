@@ -9,12 +9,10 @@ import org.example.framework.domain.entity.Link;
 import org.example.framework.mapper.LinkMapper;
 import org.example.framework.service.LinkService;
 import org.example.framework.utils.BeanCopyUtils;
-import org.example.framework.vo.LinkVo;
+import org.example.framework.domain.vo.LinkVo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-import static java.util.Collections.list;
 
 @Service("linkService")
 public class LinkServiceImpl extends ServiceImpl<LinkMapper, Link> implements LinkService {

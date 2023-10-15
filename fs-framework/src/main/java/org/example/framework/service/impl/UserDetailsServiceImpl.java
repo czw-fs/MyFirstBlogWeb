@@ -1,7 +1,6 @@
 package org.example.framework.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.example.framework.domain.AppHttpCodeEnum;
 import org.example.framework.domain.LoginUser;
@@ -12,7 +11,7 @@ import org.example.framework.mapper.UserMapper;
 import org.example.framework.service.UserService;
 import org.example.framework.utils.BeanCopyUtils;
 import org.example.framework.utils.SecurityUtils;
-import org.example.framework.vo.UserInfoVo;
+import org.example.framework.domain.vo.UserInfoVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

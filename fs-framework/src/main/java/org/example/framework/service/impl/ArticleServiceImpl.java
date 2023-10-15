@@ -12,10 +12,10 @@ import org.example.framework.service.ArticleService;
 import org.example.framework.service.CategoryService;
 import org.example.framework.utils.BeanCopyUtils;
 import org.example.framework.utils.RedisCache;
-import org.example.framework.vo.ArticleDetailVo;
-import org.example.framework.vo.ArticleListVo;
-import org.example.framework.vo.HotArticleVo;
-import org.example.framework.vo.PageVo;
+import org.example.framework.domain.vo.ArticleDetailVo;
+import org.example.framework.domain.vo.ArticleListVo;
+import org.example.framework.domain.vo.HotArticleVo;
+import org.example.framework.domain.vo.PageVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package org.example.framework.vo;
+package org.example.framework.domain.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CategoryVo {
+public class HotArticleVo {
     private Long id;
-    private String name;
+    //标题
+    private String title;
+
+    //访问量
+    private Long viewCount;
 }

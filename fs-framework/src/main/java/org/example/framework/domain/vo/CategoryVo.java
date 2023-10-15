@@ -1,4 +1,4 @@
-package org.example.framework.vo;
+package org.example.framework.domain.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,8 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BlogUserLoginVo {
-
-    private String token;
-    private UserInfoVo userInfo;
+public class CategoryVo {
+    private Long id;
+    private String name;
 }

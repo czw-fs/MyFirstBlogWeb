@@ -1,4 +1,4 @@
-package org.example.framework.vo;
+package org.example.framework.domain.vo;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
