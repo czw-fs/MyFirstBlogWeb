@@ -1,9 +1,9 @@
-package org.example.framework.service.impl;
+package org.example.framework.blog.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.example.framework.domain.entity.Tag;
 import org.example.framework.mapper.TagMapper;
-import org.example.framework.service.TagService;
+import org.example.framework.blog.service.TagService;
 import org.springframework.stereotype.Service;
 
 /**

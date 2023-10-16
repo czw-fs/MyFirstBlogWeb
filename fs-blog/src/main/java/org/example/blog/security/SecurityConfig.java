@@ -59,10 +59,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/user/userInfo").authenticated()
                 //配置允许访问http://localhost:7777/swagger-ui.html
                 .antMatchers(AUTH_WHITELIST).permitAll()
-                //其余接口都要认证
-                /**
-                 * 暂时这样写
-                 */
+                //其余接口放行
                 .anyRequest().permitAll();
 
         //配置异常处理器

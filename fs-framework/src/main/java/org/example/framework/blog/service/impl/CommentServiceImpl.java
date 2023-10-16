@@ -1,4 +1,4 @@
-package org.example.framework.service.impl;
+package org.example.framework.blog.service.impl;
 import org.example.framework.constants.SystemConstants;
 import org.example.framework.domain.AppHttpCodeEnum;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
@@ -8,8 +8,8 @@ import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.SystemException;
 import org.example.framework.domain.entity.Comment;
 import org.example.framework.mapper.CommentMapper;
-import org.example.framework.service.CommentService;
-import org.example.framework.service.UserService;
+import org.example.framework.blog.service.CommentService;
+import org.example.framework.blog.service.UserService;
 import org.example.framework.utils.BeanCopyUtils;
 import org.example.framework.domain.vo.CommentVo;
 import org.example.framework.domain.vo.PageVo;

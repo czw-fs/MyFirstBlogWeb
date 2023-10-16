@@ -1,15 +1,15 @@
-package org.example.framework.service.impl;
+package org.example.framework.blog.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.example.framework.blog.service.ArticleService;
+import org.example.framework.blog.service.CategoryService;
 import org.example.framework.constants.SystemConstants;
 import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.entity.Article;
 import org.example.framework.domain.entity.Category;
 import org.example.framework.mapper.ArticleMapper;
-import org.example.framework.service.ArticleService;
-import org.example.framework.service.CategoryService;
 import org.example.framework.utils.BeanCopyUtils;
 import org.example.framework.utils.RedisCache;
 import org.example.framework.domain.vo.ArticleDetailVo;

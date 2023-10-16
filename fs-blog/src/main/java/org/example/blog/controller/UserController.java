@@ -3,7 +3,7 @@ package org.example.blog.controller;
 import org.example.framework.annotation.SystemLog;
 import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.entity.User;
-import org.example.framework.service.UserService;
+import org.example.framework.blog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

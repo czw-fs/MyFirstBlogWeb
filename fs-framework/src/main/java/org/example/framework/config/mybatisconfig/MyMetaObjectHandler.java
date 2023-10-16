@@ -32,7 +32,11 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         } catch (Exception e) {
             userId = -1L;//表示是自己创建
         }
+
         this.setFieldValByName("updateTime", new Date(), metaObject);
-        this.setFieldValByName("updateBy", userId, metaObject);
+
+        if(userId != -1){
+            this.setFieldValByName("updateBy", userId, metaObject);
+        }
     }
 }

@@ -2,15 +2,11 @@ package org.example.blog.controller;
 
 
 
-import io.swagger.annotations.Api;
 import org.example.framework.annotation.SystemLog;
 import org.example.framework.domain.ResponseResult;
-import org.example.framework.domain.entity.Article;
-import org.example.framework.service.ArticleService;
+import org.example.framework.blog.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 /**
  * 文章

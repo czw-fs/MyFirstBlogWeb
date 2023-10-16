@@ -1,9 +1,9 @@
-package org.example.framework.service.impl;
+package org.example.framework.blog.service.impl;
 
+import org.example.framework.blog.service.UploadService;
 import org.example.framework.domain.AppHttpCodeEnum;
 import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.SystemException;
-import org.example.framework.service.UploadService;
 import org.example.framework.utils.UploadUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

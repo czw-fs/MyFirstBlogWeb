@@ -2,7 +2,7 @@ package org.example.blog.controller;
 
 
 import org.example.framework.domain.ResponseResult;
-import org.example.framework.service.BlogLoginService;
+import org.example.framework.blog.service.BlogLoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

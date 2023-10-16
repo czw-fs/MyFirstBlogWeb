@@ -1,13 +1,13 @@
-package org.example.framework.service.impl;
+package org.example.framework.blog.service.impl;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.example.framework.blog.service.LinkService;
 import org.example.framework.constants.SystemConstants;
 import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.entity.Link;
 import org.example.framework.mapper.LinkMapper;
-import org.example.framework.service.LinkService;
 import org.example.framework.utils.BeanCopyUtils;
 import org.example.framework.domain.vo.LinkVo;
 import org.springframework.stereotype.Service;

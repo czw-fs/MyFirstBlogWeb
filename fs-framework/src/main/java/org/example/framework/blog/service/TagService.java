@@ -1,4 +1,4 @@
-package org.example.framework.service;
+package org.example.framework.blog.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.example.framework.domain.entity.Tag;

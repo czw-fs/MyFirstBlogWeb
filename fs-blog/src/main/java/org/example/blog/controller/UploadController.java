@@ -1,7 +1,7 @@
 package org.example.blog.controller;
 
 import org.example.framework.domain.ResponseResult;
-import org.example.framework.service.UploadService;
+import org.example.framework.blog.service.UploadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;

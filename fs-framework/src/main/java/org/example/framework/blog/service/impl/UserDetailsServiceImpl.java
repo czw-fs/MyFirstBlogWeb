@@ -1,14 +1,14 @@
-package org.example.framework.service.impl;
+package org.example.framework.blog.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.example.framework.blog.service.UserService;
 import org.example.framework.domain.AppHttpCodeEnum;
 import org.example.framework.domain.LoginUser;
 import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.SystemException;
 import org.example.framework.domain.entity.User;
 import org.example.framework.mapper.UserMapper;
-import org.example.framework.service.UserService;
 import org.example.framework.utils.BeanCopyUtils;
 import org.example.framework.utils.SecurityUtils;
 import org.example.framework.domain.vo.UserInfoVo;

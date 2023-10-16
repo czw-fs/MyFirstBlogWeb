@@ -1,7 +1,7 @@
 package org.example.blog.controller;
 
 import org.example.framework.domain.ResponseResult;
-import org.example.framework.service.CategoryService;
+import org.example.framework.blog.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

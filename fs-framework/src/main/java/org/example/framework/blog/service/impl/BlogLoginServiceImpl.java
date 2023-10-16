@@ -1,9 +1,9 @@
-package org.example.framework.service.impl;
+package org.example.framework.blog.service.impl;
 
+import org.example.framework.blog.service.BlogLoginService;
 import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.LoginUser;
 import org.example.framework.domain.entity.User;
-import org.example.framework.service.BlogLoginService;
 import org.example.framework.utils.BeanCopyUtils;
 import org.example.framework.utils.JwtUtil;
 import org.example.framework.utils.RedisCache;

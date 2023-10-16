@@ -5,7 +5,7 @@ import org.example.framework.constants.SystemConstants;
 import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.dto.AddCommentDto;
 import org.example.framework.domain.entity.Comment;
-import org.example.framework.service.CommentService;
+import org.example.framework.blog.service.CommentService;
 import org.example.framework.utils.BeanCopyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

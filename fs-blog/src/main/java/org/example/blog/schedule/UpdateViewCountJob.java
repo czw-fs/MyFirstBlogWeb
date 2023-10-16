@@ -2,7 +2,7 @@ package org.example.blog.schedule;
 
 
 import org.example.framework.domain.entity.Article;
-import org.example.framework.service.ArticleService;
+import org.example.framework.blog.service.ArticleService;
 import org.example.framework.utils.RedisCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
