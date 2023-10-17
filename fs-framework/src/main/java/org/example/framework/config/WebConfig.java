@@ -48,6 +48,7 @@ public class WebConfig implements WebMvcConfigurer {
         fastJsonConfig.setSerializerFeatures(SerializerFeature.PrettyFormat);
         fastJsonConfig.setDateFormat("yyyy-MM-dd HH:mm:ss");
 
+        //将Long类型的转换为字符串类型返回
         SerializeConfig.globalInstance.put(Long.class, ToStringSerializer.instance);
 
         fastJsonConfig.setSerializeConfig(SerializeConfig.globalInstance);

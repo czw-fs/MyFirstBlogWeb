@@ -6,4 +6,5 @@ import org.example.framework.domain.entity.User;
 public interface LoginService {
     ResponseResult login(User user);
 
+    ResponseResult logout();
 }

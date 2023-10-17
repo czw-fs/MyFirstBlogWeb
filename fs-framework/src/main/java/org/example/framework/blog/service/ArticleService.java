@@ -2,6 +2,7 @@ package org.example.framework.blog.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.example.framework.domain.ResponseResult;
+import org.example.framework.domain.dto.AddArticleDto;
 import org.example.framework.domain.entity.Article;
 
 public interface ArticleService extends IService<Article> {
@@ -12,4 +13,8 @@ public interface ArticleService extends IService<Article> {
     ResponseResult getArticleDetail(Long id);
 
     ResponseResult updateViewCount(Long id);
+
+    ResponseResult add(AddArticleDto article);
+
+
 }

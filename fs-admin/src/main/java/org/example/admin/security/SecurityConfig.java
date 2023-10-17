@@ -47,34 +47,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 //不通过Session获取SecurityContext
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-
                 .and()
-
                 .authorizeRequests()
                 // 对于登录接口 允许匿名访问
-                .antMatchers("/login").anonymous()
-                //注销接口需要认证才能访问
-                .antMatchers("/logout").authenticated()
-                //个人信息接口必须登录后才能访问
-                .antMatchers("/user/userInfo").authenticated()
-                //配置允许访问http://localhost:7777/swagger-ui.html
-                .antMatchers(AUTH_WHITELIST).permitAll()
-                //其余接口放行
-                .anyRequest().permitAll();
+                .antMatchers("/user/login").anonymous()
+//                //注销接口需要认证才能访问
+//                .antMatchers("/logout").authenticated()
+//                .antMatchers("/user/userInfo").authenticated()
+//                .antMatchers("/upload").authenticated()
+                // 除上面外的所有请求全部不需要认证即可访问
+                .anyRequest().authenticated();
 
         //配置异常处理器
         http.exceptionHandling()
                 .authenticationEntryPoint(authenticationEntryPoint)
                 .accessDeniedHandler(accessDeniedHandler);
-
         //关闭默认的注销功能
         http.logout().disable();
-
         //把jwtAuthenticationTokenFilter添加到SpringSecurity的过滤器链中
         http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
         //允许跨域
         http.cors();
-
     }
 
     @Bean
