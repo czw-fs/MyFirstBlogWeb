@@ -1,5 +1,6 @@
 package org.example.framework.domain.vo;
 
+import io.swagger.models.auth.In;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,4 +19,7 @@ public class LinkVo {
     private String description;
     //网站地址
     private String address;
+
+    //状态
+    private Integer status;
 }

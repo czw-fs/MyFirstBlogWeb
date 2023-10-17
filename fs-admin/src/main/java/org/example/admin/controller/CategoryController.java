@@ -6,25 +6,26 @@ import org.example.framework.blog.service.CategoryService;
 import org.example.framework.domain.AppHttpCodeEnum;
 import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.entity.Category;
+import org.example.framework.domain.entity.Tag;
 import org.example.framework.domain.vo.CategoryVo;
 import org.example.framework.domain.vo.ExcelCategoryVo;
 import org.example.framework.utils.BeanCopyUtils;
 import org.example.framework.utils.WebUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/content/category")
 public class CategoryController {
     @Autowired
     private CategoryService categoryService;
-    
+
     @GetMapping("/listAllCategory")
     public ResponseResult listAllCategory(){
         List<CategoryVo> list = categoryService.listAllCategory();
@@ -58,5 +59,51 @@ public class CategoryController {
         }
     }
 
-    
+    /**
+     * 根据id查
+     * @param id
+     * @return
+     */
+    @GetMapping("/{id}")
+    public ResponseResult getById(@PathVariable("id") Long id){
+        return ResponseResult.okResult(categoryService.getById(id));
+    }
+
+    /**
+     * 增加
+     * @param tag
+     * @return
+     */
+    @PostMapping
+    public ResponseResult save(@RequestBody Category category){
+        return ResponseResult.okResult(categoryService.save(category));
+    }
+
+    /**
+     * 根据id删除
+     * @param id
+     * @return
+     */
+    @DeleteMapping("/{ids}")
+    public ResponseResult remove(@PathVariable("ids") String ids){
+        List<Integer> idsInteger = Arrays.stream(ids.split(","))
+                .map(item ->{
+                    return Integer.parseInt(item);
+                })
+                .collect(Collectors.toList());
+        return ResponseResult.okResult(categoryService.removeByIds(idsInteger));
+    }
+
+    /**
+     * 根据id更新数据
+     * @param
+     * @return
+     */
+    @PutMapping
+    public ResponseResult update(@RequestBody Category ctegory){
+        return ResponseResult.okResult(categoryService.updateById(ctegory));
+    }
+
+
+
 }
