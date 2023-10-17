@@ -3,11 +3,13 @@ package org.example.framework.blog.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.example.framework.blog.service.UserService;
+import org.example.framework.constants.SystemConstants;
 import org.example.framework.domain.AppHttpCodeEnum;
 import org.example.framework.domain.LoginUser;
 import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.SystemException;
 import org.example.framework.domain.entity.User;
+import org.example.framework.mapper.MenuMapper;
 import org.example.framework.mapper.UserMapper;
 import org.example.framework.utils.BeanCopyUtils;
 import org.example.framework.utils.SecurityUtils;
@@ -20,6 +22,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.util.List;
 import java.util.Objects;
 
 @Service("userDetailsServiceImpl")
@@ -30,6 +33,9 @@ public class UserDetailsServiceImpl extends ServiceImpl<UserMapper,User> impleme
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private MenuMapper menuMapper;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -45,8 +51,12 @@ public class UserDetailsServiceImpl extends ServiceImpl<UserMapper,User> impleme
         }
 
         //返回用户信息
-        // TODO 查询权限信息封装
-        return new LoginUser(user);
+        // 只有后台用户才需要封装权限
+        if(user.getType().equals(SystemConstants.ADMAIN)){
+            List<String> list = menuMapper.selectPermsByUserId(user.getId());
+            return new LoginUser(user,list);
+        }
+        return new LoginUser(user,null);
     }
 
     @Override

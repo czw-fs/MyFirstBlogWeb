@@ -4,47 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="142a474b-7f8f-47d1-be88-8ba01b297f71" name="Changes" comment="后台登录 done">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/ArticleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/UploadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/MenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/impl/MenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/ArticleTagService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/ArticleTagServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/RoutersVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/dto/AddArticleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/dto/TagListDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/entity/ArticleTag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/entity/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/vo/TagVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/mapper/ArticleTagMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/mapper/MenuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/mapper/RoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
+    <list default="true" id="142a474b-7f8f-47d1-be88-8ba01b297f71" name="Changes" comment="动态路由，标签curd，博文发布 done">
+      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/PermissionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/vo/ExcelCategoryVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/TagController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fs-admin/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/TagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/impl/SystemLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/impl/SystemLoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/impl/TagServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/ArticleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/ArticleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/constants/SystemConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/constants/SystemConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/entity/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/entity/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/LoginUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/vo/CategoryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/vo/CategoryVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/utils/WebUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/utils/WebUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +154,7 @@
       <workItem from="1697163982817" duration="1018000" />
       <workItem from="1697418494131" duration="9319000" />
       <workItem from="1697437687538" duration="2024000" />
-      <workItem from="1697509397522" duration="17783000" />
+      <workItem from="1697509397522" duration="21484000" />
     </task>
     <task id="LOCAL-00001" summary="注册 done">
       <option name="closed" value="true" />
@@ -213,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697511968111</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="动态路由，标签curd，博文发布 done">
+      <option name="closed" value="true" />
+      <created>1697533054362</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697533054362</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +231,8 @@
     <MESSAGE value="浏览量实时更新" />
     <MESSAGE value="结构优化 done" />
     <MESSAGE value="后台登录 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台登录 done" />
+    <MESSAGE value="动态路由，标签curd，博文发布 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="动态路由，标签curd，博文发布 done" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

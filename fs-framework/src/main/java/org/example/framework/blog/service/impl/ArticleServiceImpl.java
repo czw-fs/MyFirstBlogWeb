@@ -12,16 +12,14 @@ import org.example.framework.domain.dto.AddArticleDto;
 import org.example.framework.domain.entity.Article;
 import org.example.framework.domain.entity.ArticleTag;
 import org.example.framework.domain.entity.Category;
+import org.example.framework.domain.vo.*;
 import org.example.framework.mapper.ArticleMapper;
 import org.example.framework.utils.BeanCopyUtils;
 import org.example.framework.utils.RedisCache;
-import org.example.framework.domain.vo.ArticleDetailVo;
-import org.example.framework.domain.vo.ArticleListVo;
-import org.example.framework.domain.vo.HotArticleVo;
-import org.example.framework.domain.vo.PageVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.Objects;
@@ -131,15 +129,31 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
         Article article = BeanCopyUtils.copyBean(articleDto, Article.class);
         //添加 博客
-        save(article);
+        saveOrUpdate(article);
 
         List<ArticleTag> articleTags = articleDto.getTags().stream()
                 .map(tagId -> new ArticleTag(article.getId(), tagId))
                 .collect(Collectors.toList());
 
         //添加 博客和标签的关联
-        articleTagService.saveBatch(articleTags);
+        articleTagService.saveOrUpdateBatch(articleTags);
         return ResponseResult.okResult();
+    }
+
+    @Override
+    public ResponseResult getPage(Integer pageNum, Integer pageSize, ArticleListVo articleListVo) {
+        LambdaQueryWrapper<Article> wrapper = new LambdaQueryWrapper<>();
+        wrapper.like(StringUtils.hasText(articleListVo.getTitle()),Article::getTitle,articleListVo.getTitle());
+        wrapper.like(StringUtils.hasText(articleListVo.getSummary()),Article::getSummary,articleListVo.getSummary());
+
+        Page page = new Page<Article>();
+        page.setCurrent(pageNum);
+        page.setSize(pageSize);
+        page(page,wrapper);
+
+        PageVo pageVo = new PageVo(page.getRecords(),page.getTotal());
+
+        return ResponseResult.okResult(pageVo);
     }
 
 }

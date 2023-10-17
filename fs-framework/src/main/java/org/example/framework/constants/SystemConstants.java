@@ -41,4 +41,9 @@ public class SystemConstants
      * 分类状态
      */
     public static final String NORMAL = "0";
+
+    /**
+     * 管理员身份标识
+     */
+    public static final String ADMAIN = "1";
 }
