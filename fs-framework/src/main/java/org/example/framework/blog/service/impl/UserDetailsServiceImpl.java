@@ -22,7 +22,7 @@ import org.springframework.util.StringUtils;
 
 import java.util.Objects;
 
-@Service
+@Service("userDetailsServiceImpl")
 public class UserDetailsServiceImpl extends ServiceImpl<UserMapper,User> implements UserDetailsService, UserService {
 
     @Autowired

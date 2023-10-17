@@ -4,36 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="142a474b-7f8f-47d1-be88-8ba01b297f71" name="Changes" comment="浏览量实时更新">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="142a474b-7f8f-47d1-be88-8ba01b297f71" name="Changes" comment="结构优化 done">
+      <change afterPath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/impl/SystemLoginServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/domain/AdminUserInfoVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-admin/src/main/java/org/example/admin/controller/TagController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/BlogLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/BlogLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/LinkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/LinkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/schedule/UpdateViewCountJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/schedule/UpdateViewCountJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/config/mybatisconfig/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/config/mybatisconfig/MyMetaObjectHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/BlogLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/BlogLoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/LinkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/LinkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/TagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/UploadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/impl/BlogLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/BlogLoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/impl/LinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/LinkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/impl/OssUploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/OssUploadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/TagServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/TagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/admin/service/impl/TagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +87,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/projecttest/gitrep/hello-Security&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/projecttest/gitrep/MyFirstBlogWeb/fs-admin/src/main/java/org/example/admin&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -119,6 +101,14 @@
 }</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\projecttest\gitrep\MyFirstBlogWeb\fs-admin\src\main\java\org\example\admin" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.framework.admin.service.impl" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -152,7 +142,9 @@
       <option name="presentableId" value="Default" />
       <updated>1697163980463</updated>
       <workItem from="1697163982817" duration="1018000" />
-      <workItem from="1697418494131" duration="741000" />
+      <workItem from="1697418494131" duration="9319000" />
+      <workItem from="1697437687538" duration="2024000" />
+      <workItem from="1697509397522" duration="1100000" />
     </task>
     <task id="LOCAL-00001" summary="注册 done">
       <option name="closed" value="true" />
@@ -170,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697190794192</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="结构优化 done">
+      <option name="closed" value="true" />
+      <created>1697419267815</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697419267815</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,16 +203,12 @@
     <MESSAGE value="七牛云上传头像，更新个人资料 done" />
     <MESSAGE value="注册 done" />
     <MESSAGE value="浏览量实时更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="浏览量实时更新" />
+    <MESSAGE value="结构优化 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="结构优化 done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/fs-blog/src/main/java/org/example/blog/filter/JwtAuthenticationTokenFilter.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/fs-framework/src/main/java/org/example/framework/blog/service/impl/ArticleServiceImpl.java</url>
           <line>90</line>

@@ -1,7 +1,7 @@
 package org.example.admin.controller;
 
 import org.example.framework.domain.ResponseResult;
-import org.example.framework.blog.service.TagService;
+import org.example.framework.admin.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
