@@ -22,10 +22,7 @@ public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
-    @PostMapping
-    public ResponseResult add(@RequestBody AddArticleDto article){
-        return articleService.add(article);
-    }
+
 
     @GetMapping("/list")
     public ResponseResult getPage(Integer pageNum, Integer pageSize, ArticleListVo articleListVo){
@@ -44,10 +41,13 @@ public class ArticleController {
 
     /**
      * 增加
-     * @param tag
+     * @param
      * @return
      */
-
+    @PostMapping
+    public ResponseResult add(@RequestBody AddArticleDto article){
+        return articleService.add(article);
+    }
 
     /**
      * 根据id删除

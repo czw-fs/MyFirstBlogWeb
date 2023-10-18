@@ -1,4 +1,4 @@
-package org.example.framework.domain;
+package org.example.framework.domain.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

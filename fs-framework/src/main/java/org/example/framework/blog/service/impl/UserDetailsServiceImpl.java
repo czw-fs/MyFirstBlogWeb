@@ -1,16 +1,23 @@
 package org.example.framework.blog.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.example.framework.admin.service.UserRoleService;
 import org.example.framework.blog.service.UserService;
 import org.example.framework.constants.SystemConstants;
 import org.example.framework.domain.AppHttpCodeEnum;
 import org.example.framework.domain.LoginUser;
 import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.SystemException;
+import org.example.framework.domain.entity.RoleMenu;
+import org.example.framework.domain.entity.Tag;
 import org.example.framework.domain.entity.User;
+import org.example.framework.domain.entity.UserRole;
+import org.example.framework.domain.vo.PageVo;
 import org.example.framework.mapper.MenuMapper;
 import org.example.framework.mapper.UserMapper;
+import org.example.framework.mapper.UserRoleMapper;
 import org.example.framework.utils.BeanCopyUtils;
 import org.example.framework.utils.SecurityUtils;
 import org.example.framework.domain.vo.UserInfoVo;
@@ -20,10 +27,12 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Service("userDetailsServiceImpl")
 public class UserDetailsServiceImpl extends ServiceImpl<UserMapper,User> implements UserDetailsService, UserService {
@@ -36,6 +45,12 @@ public class UserDetailsServiceImpl extends ServiceImpl<UserMapper,User> impleme
 
     @Autowired
     private MenuMapper menuMapper;
+
+    @Autowired
+    private UserRoleMapper userRoleMapper;
+
+    @Autowired
+    private UserRoleService userRoleService;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -107,4 +122,47 @@ public class UserDetailsServiceImpl extends ServiceImpl<UserMapper,User> impleme
         save(user);
         return ResponseResult.okResult();
     }
+
+    @Override
+    public ResponseResult listPage(Integer pageNum, Integer pageSize, User user) {
+        //分页查询
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.like(StringUtils.hasText(user.getUserName()),User::getUserName,user.getUserName());
+        queryWrapper.eq(StringUtils.hasText(user.getPhonenumber()),User::getPhonenumber,user.getPhonenumber());
+
+        Page<User> page = new Page<>();
+        page.setCurrent(pageNum);
+        page.setSize(pageSize);
+        page(page, queryWrapper);
+        //封装数据返回
+        PageVo pageVo = new PageVo(page.getRecords(),page.getTotal());
+        return ResponseResult.okResult(pageVo);
+    }
+
+    @Override
+    @Transactional
+    public Boolean add(User user) {
+        save(user);
+        Long userId = user.getId();
+        List<UserRole> roleMenuList = user.getRoleIds().stream()
+                .map(roleId -> {
+            return new UserRole(userId, roleId);
+        }).collect(Collectors.toList());
+
+        userRoleService.saveBatch(roleMenuList);
+        return true;
+    }
+
+    @Override
+    public Boolean removeByIdList(List<Long> idsLong) {
+        LambdaQueryWrapper<UserRole> wrapper = new LambdaQueryWrapper<>();
+        for (Long userId : idsLong) {
+            wrapper.eq(UserRole::getUserId,userId);
+        }
+        userRoleMapper.delete(wrapper);
+        removeByIds(idsLong);
+        return true;
+    }
+
+
 }

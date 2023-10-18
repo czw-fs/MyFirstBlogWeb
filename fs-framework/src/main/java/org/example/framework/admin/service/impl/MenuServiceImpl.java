@@ -1,13 +1,11 @@
 package org.example.framework.admin.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.example.framework.admin.service.MenuService;
 import org.example.framework.constants.SystemConstants;
 import org.example.framework.domain.ResponseResult;
 import org.example.framework.domain.entity.Menu;
-import org.example.framework.domain.entity.Tag;
 import org.example.framework.domain.vo.PageVo;
 import org.example.framework.mapper.MenuMapper;
 import org.example.framework.utils.SecurityUtils;
@@ -24,6 +22,20 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements Me
     @Autowired
     private MenuMapper menuMapper;
 
+    @Override
+    public List<Menu> selectAllMenuTree() {
+        List<Menu> menuList = menuMapper.getAllMenuList();
+        menuList.stream()
+                .map(item -> {
+            item.setLabel(item.getMenuName());
+            return item;
+        })
+                .collect(Collectors.toList());
+
+        List<Menu> menuTree = builderMenuTree(menuList,0L);
+        return menuTree;
+    }
+
 
     @Override
     public ResponseResult<PageVo> pageTagList(Integer pageNum, Integer pageSize, Menu menu) {
@@ -35,6 +47,8 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements Me
         List<Menu> menuList = menuMapper.selectList(queryWrapper);
         return ResponseResult.okResult(menuList);
     }
+
+
 
     @Override
     public List<String> selectPermsByUserId(Long id) {

@@ -26,6 +26,15 @@ public class MenuController {
     private MenuService menuService;
 
     /**
+     * 获取菜单树
+     */
+    @GetMapping("/treeselect")
+    public ResponseResult treeselect(){
+        List<Menu> menuList = menuService.selectAllMenuTree();
+        return ResponseResult.okResult(menuList);
+    }
+
+    /**
      * 查列表
      * @param pageNum
      * @param pageSize

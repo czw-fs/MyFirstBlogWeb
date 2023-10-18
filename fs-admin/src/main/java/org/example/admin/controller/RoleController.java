@@ -27,6 +27,15 @@ public class RoleController {
     private RoleService roleService;
 
     /**
+     * 获取所有角色
+     */
+    @GetMapping("/listAllRole")
+    public ResponseResult listAllRole(){
+        return ResponseResult.okResult(roleService.list());
+    }
+
+
+    /**
      * 查列表
      * @param pageNum
      * @param pageSize
@@ -36,6 +45,14 @@ public class RoleController {
     @GetMapping("/list")
     public ResponseResult<PageVo> list(Integer pageNum, Integer pageSize, Role role){
         return roleService.pageTagList(pageNum,pageSize,role);
+    }
+
+    /**
+     * 改变角色状态
+     */
+    @PutMapping("/changeStatus")
+    public ResponseResult changeStatus(@RequestBody Role role){
+        return ResponseResult.okResult(roleService.updateById(role));
     }
 
 
@@ -56,7 +73,7 @@ public class RoleController {
      */
     @PostMapping
     public ResponseResult save(@RequestBody Role role){
-        return ResponseResult.okResult(roleService.save(role));
+        return ResponseResult.okResult(roleService.add(role));
     }
 
     /**
@@ -71,7 +88,7 @@ public class RoleController {
                     return Integer.parseInt(item);
                 })
                 .collect(Collectors.toList());
-        return ResponseResult.okResult(roleService.removeByIds(idsInteger));
+        return ResponseResult.okResult(roleService.removeByIdList(idsInteger));
     }
 
     /**

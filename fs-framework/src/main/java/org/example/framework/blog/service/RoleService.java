@@ -13,4 +13,9 @@ public interface RoleService extends IService<Role> {
 
 
     ResponseResult<PageVo> pageTagList(Integer pageNum, Integer pageSize, Role role);
+
+
+    Boolean add(Role role);
+
+    Boolean removeByIdList(List<Integer> idsInteger);
 }

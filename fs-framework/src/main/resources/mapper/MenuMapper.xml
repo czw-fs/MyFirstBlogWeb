@@ -44,5 +44,13 @@
         ORDER BY
             m.parent_id,m.order_num
     </select>
+    <select id="getAllMenuList" resultType="org.example.framework.domain.entity.Menu">
+        select
+            m.id,m.menu_name,m.parent_id
+        from
+            sys_menu m
+        where
+            m.del_flag = "0"
+    </select>
 
 </mapper>

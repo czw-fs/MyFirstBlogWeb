@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  */
 public class BeanCopyUtils {
 
-    private BeanCopyUtils() {
+    public BeanCopyUtils() {
     }
 
     public static <V> V copyBean(Object source,Class<V> clazz) {

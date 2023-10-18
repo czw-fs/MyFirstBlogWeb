@@ -1,6 +1,7 @@
 package org.example.framework.domain.entity;
 
 import java.util.Date;
+import java.util.List;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -24,6 +25,13 @@ public class User {
     //主键
     @TableId
     private Long id;
+
+    @TableField(exist = false)
+    private Long userId;
+
+    @TableField(exist = false)
+    private List<Long> roleIds;
+
 
     //用户名
     private String userName;

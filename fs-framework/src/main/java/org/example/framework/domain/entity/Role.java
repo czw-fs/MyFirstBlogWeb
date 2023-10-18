@@ -1,7 +1,9 @@
 package org.example.framework.domain.entity;
 
 import java.util.Date;
+import java.util.List;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +22,9 @@ import com.baomidou.mybatisplus.annotation.TableName;
 public class Role {
 //角色ID@TableId
     private Long id;
+
+    @TableField(exist = false)
+    private List<Long> menuIds;
 
 //角色名称
     private String roleName;

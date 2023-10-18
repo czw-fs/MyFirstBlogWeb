@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,7 +23,8 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @TableName("sys_menu")
 public class Menu {
-//菜单ID@TableId
+//菜单ID
+    @TableId
     private Long id;
 
     //子目录
@@ -31,6 +33,10 @@ public class Menu {
 
 //菜单名称
     private String menuName;
+
+    //前端菜单名称
+    @TableField(exist = false)
+    private String label;
 //父菜单ID
     private Long parentId;
 //显示顺序
